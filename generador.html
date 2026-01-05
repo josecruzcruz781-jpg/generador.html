@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FUTURA PRO – Capacidad económica para capacidad social</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* ===== ESTILOS DE FUTURA PRO ===== */
+:root {
+    --azul: #002A8D;
+    --verde: #005C29;
+    --verde-claro: #E8F5E9;
+    --gris: #f3f4f6;
+    --texto: #1f2937;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f9fafb; color: var(--texto); line-height: 1.6; }
+
+/* HEADER CON PROPÓSITO CLARO */
+header {
+    background: linear-gradient(135deg, var(--azul), var(--verde));
+    color: white;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+header .tagline {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    opacity: 0.95;
+}
+
+header .mission {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1.2rem;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 1.5rem auto 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-left: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+/* NAVEGACIÓN */
+nav {
+    display: flex;
+    overflow-x: auto;
+    background: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-btn {
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    background: var(--gris);
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+    margin: 0 0.25rem;
+}
+
+.nav-btn.active {
+    background: var(--verde);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 92, 41, 0.2);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    border: 1px solid #f0f0f0;
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    color: var(--azul);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+h3 {
+    margin-top: 1.8rem;
+    color: #111827;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+p {
+    margin: 1rem 0;
+    line-height: 1.7;
+}
+
+.box {
+    background: var(--verde-claro);
+    border-left: 4px solid var(--verde);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.8rem;
+    font-size: 1rem;
+}
+
+.link {
+    display: block;
+    padding: 1rem 1.25rem;
+    background: #f0f7ff;
+    border-radius: 12px;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: 600;
+    border: 1px solid #dbeafe;
+    transition: all 0.2s;
+}
+
+.link:hover {
+    background: #e0f2fe;
+}
+
+.purpose-badge {
+    display: inline-block;
+    background: rgba(0, 92, 41, 0.1);
+    color: var(--verde);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    border: 1px solid rgba(0, 92, 41, 0.2);
+}
+
+/* ===== ESTILOS DEL GENERADOR DE IDEAS ===== */
+:root {
+    --verde-idea: #10b981;
+    --azul-idea: #3b82f6;
+    --naranja-idea: #f97316;
+    --morado-idea: #8b5cf6;
+}
+
+/* Header del generador */
+.header-generador {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    border: 3px solid var(--azul-idea);
+    position: relative;
+    overflow: hidden;
+}
+
+.header-generador::before {
+    content: "🤝";
+    position: absolute;
+    font-size: 8rem;
+    opacity: 0.1;
+    right: 30px;
+    top: 10px;
+}
+
+.titulo-principal {
+    color: #1e293b;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.subtitulo {
+    color: #475569;
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Cajas de preguntas */
+.pregunta-box {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-left: 6px solid var(--verde-idea);
+    transition: transform 0.3s;
+}
+
+.pregunta-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.numero-pregunta {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: var(--verde-idea);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.texto-pregunta {
+    font-size: 1.3rem;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+}
+
+/* Opciones de respuesta */
+.opciones {
+    display: grid;
+    gap: 12px;
+    margin-top: 1rem;
+}
+
+.opcion {
+    padding: 18px 20px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.opcion:hover {
+    background: #f1f5f9;
+    border-color: var(--azul-idea);
+}
+
+.opcion.seleccionada {
+    background: #dbeafe;
+    border-color: var(--azul-idea);
+    color: #1e40af;
+}
+
+.icono-opcion {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    color: var(--azul-idea);
+}
+
+/* Botones generador */
+.boton {
+    background: var(--verde-idea);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.boton:hover {
+    background: #0da271;
+    transform: scale(1.03);
+}
+
+.boton-secundario {
+    background: white;
+    color: var(--azul-idea);
+    border: 2px solid var(--azul-idea);
+}
+
+.boton-secundario:hover {
+    background: #eff6ff;
+}
+
+/* Resultado - Plan de Acción */
+.resultado-box {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 3rem 0;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    border: 3px solid var(--naranja-idea);
+    animation: aparecer 0.5s ease-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.titulo-resultado {
+    color: #1e293b;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.paso-accion {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+}
+
+.numero-paso {
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    background: #f59e0b;
+    color: white;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Recursos */
+.recursos-box {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.recurso-item {
+    background: white;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    border-left: 4px solid var(--morado-idea);
+}
+
+/* Footer humanizado */
+.footer-generador {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+    color: #64748b;
+    border-top: 2px dashed #cbd5e1;
+}
+
+.corazon {
+    color: #ef4444;
+    animation: latido 1.5s infinite;
+}
+
+@keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Responsive mejorado para Android */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .titulo-principal { 
+        font-size: 1.8rem; 
+        line-height: 1.3;
+    }
+    
+    .subtitulo { 
+        font-size: 1.1rem; 
+        padding: 0 10px;
+    }
+    
+    .pregunta-box { 
+        padding: 1.2rem; 
+        margin: 1.5rem 0;
+    }
+    
+    .texto-pregunta {
+        font-size: 1.1rem;
+    }
+    
+    .opcion {
+        padding: 14px 16px;
+    }
+    
+    .resultado-box { 
+        padding: 1.5rem; 
+        margin: 2rem 0;
+    }
+    
+    .titulo-resultado {
+        font-size: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .boton {
+        padding: 14px 24px;
+        font-size: 1rem;
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* Evitar zoom en inputs en iOS */
+input, select, textarea {
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>FUTURA PRO</h1>
+    <p class="tagline">Desarrolla capacidad económica para construir capacidad social</p>
+    
+    <div class="mission">
+        <strong>Nuestra visión:</strong> Creemos que el emprendimiento bien fundamentado es la palanca más poderosa para el desarrollo personal y comunitario. Aquí no solo aprendes a facturar; aprendes a crear el excedente que te permitirá, en tu siguiente capítulo, ser un agente de cambio en tu comunidad.
+    </div>
+</header>
+
+<nav>
+    <button class="nav-btn active" onclick="tab('inicio',this)">VISIÓN</button>
+    <button class="nav-btn" onclick="tab('enfoque',this)">NUESTRO ENFOQUE</button>
+    <button class="nav-btn" onclick="tab('plan',this)">PLAN 90 DÍAS</button>
+    <button class="nav-btn" onclick="tab('ventas',this)">VENTAS</button>
+    <button class="nav-btn" onclick="tab('sistemas',this)">SISTEMAS</button>
+    <button class="nav-btn" onclick="tab('escalar',this)">ESCALAR</button>
+    <button class="nav-btn" onclick="tab('generador',this)">TU PRÓXIMO PASO</button>
+</nav>
+
+<div class="container">
+
+<!-- ===== SECCIÓN VISIÓN ===== -->
+<section id="inicio" class="card">
+    <h2>Más que un curso: un modelo de desarrollo</h2>
+    
+    <p>FUTURA PRO nace de una convicción simple pero profunda:</p>
+    
+    <div class="box">
+        <strong>La capacidad de generar valor económico sostenible es el primer paso necesario para generar valor social duradero.</strong>
+    </div>
+    
+    <p>No importa si tu meta es independencia financiera personal o financiar un proyecto comunitario: los fundamentos son los mismos. La diferencia está en qué haces con los cimientos una vez construidos.</p>
+    
+    <h3>¿Para quién es esto?</h3>
+    <ul>
+        <li><strong>Para el que necesita empezar desde cero</strong> pero quiere hacerlo con fundamentos, no con atajos.</li>
+        <li><strong>Para el que ya tiene un negocio</strong> pero quiere sistematizarlo para liberar su tiempo.</li>
+        <li><strong>Para el visionario social</strong> que entiende que primero debe dominar la economía para después transformarla.</li>
+    </ul>
+    
+    <div class="box">
+        <div class="purpose-badge">Propósito claro</div>
+        <p><strong>Lo que nos hace diferentes:</strong> No prometemos riqueza rápida. Ofrecemos el marco para construir negocios que sean vehículos hacia lo que realmente te importa.</p>
+    </div>
+</section>
+
+<!-- ===== SECCIÓN ENFOQUE ===== -->
+<section id="enfoque" class="card hidden">
+    <h2>Nuestro enfoque: Construir para durar</h2>
+    
+    <p>Mientras muchos enseñan "cómo ganar dinero rápido", nosotros enseñamos <strong>cómo construir estructuras económicas que sostengan tu visión a largo plazo.</strong></p>
+    
+    <h3>Los 3 pilares de nuestro método:</h3>
+    
+    <div class="box">
+        <strong>1. Fundamentos sólidos</strong>
+        <p>Lo que funciona para un microemprendimiento y para una startup de tecnología son los mismos principios económicos. Te enseñamos esos principios universales.</p>
+    </div>
+    
+    <div class="box">
+        <strong>2. Sistematización temprana</strong>
+        <p>Aprendes a construir procesos desde el día 1. No "primero gana, luego sistematiza". Así liberas tu tiempo para pensar estratégicamente.</p>
+    </div>
+    
+    <div class="box">
+        <strong>3. Mentalidad de constructor</strong>
+        <p>No de vendedor. Un vendedor busca la transacción. Un constructor busca crear valor que perdure y genere excedentes para reinvertir.</p>
+    </div>
+    
+    <p><strong>Resultado:</strong> No solo un ingreso, sino un <em>activo</em> que puedes escalar, delegar o eventualmente usar como motor para otros proyectos.</p>
+</section>
+
+<!-- ===== SECCIÓN PLAN 90 DÍAS ===== -->
+<section id="plan" class="card hidden">
+    <h2>Plan de 90 días: De la idea a la estructura</h2>
+    
+    <div class="box">
+        <div class="purpose-badge">Fase 1: Cimientos</div>
+        <p><strong>Meta:</strong> Validar que tu solución tiene mercado y crear un proceso repetible.</p>
+    </div>
+    
+    <h3>Mes 1 – Validación real (no teórica)</h3>
+    <ul>
+        <li>Identificar un problema específico que puedas resolver</li>
+        <li>Hablar con 30 personas potencialmente afectadas</li>
+        <li>Crear una oferta mínima viable (sin perfeccionismo)</li>
+        <li>Establecer métricas básicas de seguimiento</li>
+    </ul>
+    
+    <h3>Mes 2 – Primeros ingresos sistematizados</h3>
+    <ul>
+        <li>Probar al menos 3 canales de contacto directo</li>
+        <li>Documentar cada paso del proceso de venta</li>
+        <li>Crear materiales reutilizables (no desde cero cada vez)</li>
+        <li>Establecer precio basado en valor, no en miedo</li>
+    </ul>
+    
+    <h3>Mes 3 – Optimización y proyección</h3>
+    <ul>
+        <li>Identificar qué actividades consumen más tiempo</li>
+        <li>Crear procesos para las tareas repetitivas</li>
+        <li>Proyectar los siguientes 90 días con datos reales</li>
+        <li>Definir cuál será tu primera inversión en mejoras</li>
+    </ul>
+    
+    <div class="box">
+        <strong>Al finalizar los 90 días:</strong>
+        <p>Sabrás exactamente: 1) Si tu idea funciona, 2) Cómo funciona, 3) Cuánto cuesta hacerla funcionar, 4) Cuánto tiempo te toma, y 5) Qué puedes mejorar primero.</p>
+    </div>
+</section>
+
+<!-- ===== SECCIÓN VENTAS ===== -->
+<section id="ventas" class="card hidden">
+    <h2>Ventas: Comunicar valor, no desesperación</h2>
+    
+    <p>La diferencia entre un negocio que sobrevive y uno que escala está en cómo entiende las ventas.</p>
+    
+    <div class="box">
+        <strong>Vender no es persuadir a alguien de que compre lo que no necesita.</strong>
+        <p>Es encontrar a quien ya tiene el problema que tú resuelves y mostrarle claramente cómo lo resuelves.</p>
+    </div>
+    
+    <h3>Nuestro marco de ventas:</h3>
+    <ul>
+        <li><strong>Escucha antes de hablar:</strong> Entiende el problema real, no el que supones.</li>
+        <li><strong>Propón soluciones, no productos:</strong> La gente no compra herramientas, compra resultados.</li>
+        <li><strong>Sé transparente con límites:</strong> Decir "no sé resolver eso" genera más confianza que fingir.</li>
+        <li><strong>Documenta cada interacción:</strong> Cada conversación es data para mejorar.</li>
+    </ul>
+    
+    <div class="box">
+        <strong>Ejemplo real:</strong>
+        <p>"No vendo limpieza de oficinas. Vendo a dueños de negocios 2 horas adicionales a su semana que antes perdían supervisando la limpieza."</p>
+    </div>
+</section>
+
+<!-- ===== SECCIÓN SISTEMAS ===== -->
+<section id="sistemas" class="card hidden">
+    <h2>Sistemas: La máquina detrás del esfuerzo</h2>
+    
+    <p>El salto de "autoempleado" a "dueño de negocio" ocurre cuando dejas de ser la pieza indispensable.</p>
+    
+    <h3>¿Qué sistematizar primero?</h3>
+    
+    <div class="box">
+        <strong>1. Atención al cliente</strong>
+        <p>Respuestas frecuentes, horarios claros, canales definidos. Reduce el 40% de tu tiempo en comunicación.</p>
+    </div>
+    
+    <div class="box">
+        <strong>2. Facturación y cobranza</strong>
+        <p>Sistema simple pero impecable. Lo financiero bien organizado es lo que permite reinvertir.</p>
+    </div>
+    
+    <div class="box">
+        <strong>3. Entrega de valor</strong>
+        <p>Cómo aseguras que cada cliente reciba exactamente lo prometido, cada vez.</p>
+    </div>
+    
+    <h3>Herramientas mínimas para empezar:</h3>
+    <ul>
+        <li>Plantilla de presupuesto (Google Sheets)</li>
+        <li>Checklist de entrega (Notion o Trello)</li>
+        <li>Respuestas guardadas (WhatsApp Business)</li>
+        <li>Calendario de seguimiento (Google Calendar)</li>
+    </ul>
+</section>
+
+<!-- ===== SECCIÓN ESCALAR ===== -->
+<section id="escalar" class="card hidden">
+    <h2>Escalar: Cuando el negocio financia la visión</h2>
+    
+    <p>Esta es la fase donde el entrenamiento muestra su verdadero valor.</p>
+    
+    <div class="box">
+        <div class="purpose-badge">Nuestra tesis central</div>
+        <p><strong>Un negocio bien estructurado genera tres cosas:</strong> 1) Ingresos para vivir, 2) Excedentes para reinvertir, 3) Tiempo para pensar estratégicamente.</p>
+        <p>El punto 3 es donde decides: ¿reinvierto en crecer el negocio, o uso parte del excedente para otro proyecto (personal o social)?</p>
+    </div>
+    
+    <h3>Señales de que estás listo para escalar:</h3>
+    <ul>
+        <li>Tienes al menos 5 clientes recurrentes</li>
+        <li>Tus procesos están documentados</li>
+        <li>Sabes exactamente cuánto cuesta conseguir un nuevo cliente</li>
+        <li>Tienes al menos 10 horas semanales que NO gastas en operaciones</li>
+    </ul>
+    
+    <h3>Dos caminos posibles (o ambos):</h3>
+    
+    <div class="box">
+        <strong>Camino A: Crecimiento comercial</strong>
+        <p>Reinvertir en marketing, mejorar el servicio, expandir a nuevos mercados, contratar ayuda.</p>
+    </div>
+    
+    <div class="box">
+        <strong>Camino B: Proyecto paralelo</strong>
+        <p>Usar parte del excedente y tiempo para empezar ese proyecto social, comunitario o personal que siempre quisiste.</p>
+    </div>
+    
+    <h3>Lo que sigue después de FUTURA PRO:</h3>
+    <p>Estamos diseñando un programa de seguimiento para quienes completen esta fase y quieran:</p>
+    <ul>
+        <li>Acceder a mentoría especializada en su industria</li>
+        <li>Conectar con otros emprendedores con visión social</li>
+        <li>Participar en pilotos de proyectos comunitarios financiados por negocios</li>
+    </ul>
+    
+    <div class="box" style="background: #E3F2FD; border-left-color: #1565C0;">
+        <strong>La promesa FUTURA PRO:</strong>
+        <p>Te damos el marco para construir la base económica. Tú decides qué edificas sobre ella.</p>
+    </div>
+</section>
+
+<!-- ===== SECCIÓN GENERADOR DE IDEAS (NUEVA) ===== -->
+<section id="generador" class="card hidden">
+    <!-- Header con propósito claro -->
+    <header class="header-generador">
+        <h1 class="titulo-principal">🌱 Descubre Tu Siguiente Paso</h1>
+        <p class="subtitulo">
+            Una guía práctica para personas que ya están haciendo algo, 
+            pero no saben cómo crecer o mejorar. Totalmente gratis, sin registros.
+        </p>
+        <div style="margin-top: 2rem;">
+            <span style="background: #dcfce7; color: #166534; padding: 8px 16px; border-radius: 20px; margin: 5px; display: inline-block;">
+                <i class="fas fa-heart"></i> Labor Social
+            </span>
+            <span style="background: #dbeafe; color: #1e40af; padding: 8px 16px; border-radius: 20px; margin: 5px; display: inline-block;">
+                <i class="fas fa-lock"></i> 100% Privado
+            </span>
+            <span style="background: #fef3c7; color: #92400e; padding: 8px 16px; border-radius: 20px; margin: 5px; display: inline-block;">
+                <i class="fas fa-bolt"></i> Resultados Inmediatos
+            </span>
+        </div>
+    </header>
+
+    <!-- Pregunta 1: Qué haces actualmente -->
+    <div class="pregunta-box">
+        <div class="numero-pregunta">1</div>
+        <h2 class="texto-pregunta">¿Qué estás haciendo actualmente? (Elige lo que más se acerque)</h2>
+        <div class="opciones" id="pregunta1">
+            <div class="opcion" data-value="artesanal">
+                <div class="icono-opcion">👩‍🎨</div>
+                <div>
+                    <strong>Artesanía o productos hechos a mano</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        Joyería, cerámica, textiles, decoración, etc.
+                    </div>
+                </div>
+            </div>
+            <div class="opcion" data-value="comida">
+                <div class="icono-opcion">🍲</div>
+                <div>
+                    <strong>Comida o productos alimenticios</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        Panadería, mermeladas, salsas, comida saludable, etc.
+                    </div>
+                </div>
+            </div>
+            <div class="opcion" data-value="servicios">
+                <div class="icono-opcion">🔧</div>
+                <div>
+                    <strong>Servicios personales o profesionales</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        Reparaciones, cuidado, enseñanza, consultoría, etc.
+                    </div>
+                </div>
+            </div>
+            <div class="opcion" data-value="digital">
+                <div class="icono-opcion">💻</div>
+                <div>
+                    <strong>Contenido digital o servicios online</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        Tutoriales, diseño, community management, etc.
+                    </div>
+                </div>
+            </div>
+            <div class="opcion" data-value="otro">
+                <div class="icono-opcion">✨</div>
+                <div>
+                    <strong>Otra cosa (describe brevemente)</strong>
+                    <div style="margin-top: 8px;">
+                        <input type="text" id="otroInput" placeholder="¿Qué haces?" 
+                               style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 16px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pregunta 2: Dificultad actual -->
+    <div class="pregunta-box">
+        <div class="numero-pregunta">2</div>
+        <h2 class="texto-pregunta">¿Cuál es tu principal dificultad ahora mismo?</h2>
+        <div class="opciones" id="pregunta2">
+            <div class="opcion" data-value="clientes">
+                <div class="icono-opcion">👥</div>
+                <div>
+                    <strong>Conseguir más clientes o ventas</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        La gente no me conoce, no sé cómo llegar a más personas
+                    </div>
+                </div>
+            </div>
+            <div class="opcion" data-value="precios">
+                <div class="icono-opcion">💰</div>
+                <div>
+                    <strong>No sé cuánto cobrar o mis precios son bajos</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        Me pagan poco, no valoro bien mi trabajo
+                    </div>
+                </div>
+            </div>
+            <div class="opcion" data-value="tiempo">
+                <div class="icono-opcion">⏰</div>
+                <div>
+                    <strong>No tengo tiempo para crecer</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        Hago todo solo/a, estoy saturado/a
+                    </div>
+                </div>
+            </div>
+            <div class="opcion" data-value="confianza">
+                <div class="icono-opcion">😰</div>
+                <div>
+                    <strong>Me falta confianza o no sé por dónde empezar</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        Siento que no estoy listo/a, tengo miedo a fallar
+                    </div>
+                </div>
+            </div>
+            <div class="opcion" data-value="organizacion">
+                <div class="icono-opcion">📊</div>
+                <div>
+                    <strong>Me desorganizo o no sé administrar</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        No llevo cuentas, no planeo, trabajo sin orden
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pregunta 3: Recursos disponibles -->
+    <div class="pregunta-box">
+        <div class="numero-pregunta">3</div>
+        <h2 class="texto-pregunta">¿Qué tienes disponible para avanzar?</h2>
+        <p style="color: #64748b; margin-bottom: 1rem;">(Puedes elegir varias)</p>
+        <div class="opciones" id="pregunta3" data-multiple="true">
+            <div class="opcion" data-value="telefono">
+                <div class="icono-opcion">📱</div>
+                <div>
+                    <strong>Un smartphone con cámara</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        Puedo tomar fotos y videos decentes
+                    </div>
+                </div>
+            </div>
+            <div class="opcion" data-value="horas">
+                <div class="icono-opcion">🕐</div>
+                <div>
+                    <strong>2-5 horas libres a la semana</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        Puedo dedicar algo de tiempo a mejorar
+                    </div>
+                </div>
+            </div>
+            <div class="opcion" data-value="redes">
+                <div class="icono-opcion">👍</div>
+                <div>
+                    <strong>Cuento con apoyo de familia/amigos</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        Alguien puede ayudarme con algo
+                    </div>
+                </div>
+            </div>
+            <div class="opcion" data-value="internet">
+                <div class="icono-opcion">🌐</div>
+                <div>
+                    <strong>Acceso a internet</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        Puedo investigar y aprender online
+                    </div>
+                </div>
+            </div>
+            <div class="opcion" data-value="local">
+                <div class="icono-opcion">🏠</div>
+                <div>
+                    <strong>Un espacio para trabajar</strong>
+                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px;">
+                        Mesa, cocina, taller pequeño, etc.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón para generar plan -->
+    <div style="text-align: center; margin: 3rem 0;">
+        <button class="boton" onclick="generarPlanAccion()">
+            <i class="fas fa-magic" style="margin-right: 10px;"></i>
+            Ver Mi Plan de Acción Personalizado
+        </button>
+        <div style="margin-top: 1rem;">
+            <button class="boton boton-secundario" onclick="reiniciar()">
+                <i class="fas fa-redo" style="margin-right: 10px;"></i>
+                Volver a empezar
+            </button>
+        </div>
+    </div>
+
+    <!-- Resultado: Plan de Acción -->
+    <div id="resultado" style="display: none;">
+        <div class="resultado-box">
+            <h2 class="titulo-resultado">
+                <i class="fas fa-map" style="color: var(--naranja-idea);"></i>
+                Tu Plan de Acción Personalizado
+            </h2>
+            
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #475569;">
+                Basado en tus respuestas, aquí tienes <strong>3 pasos concretos</strong> 
+                que puedes empezar esta misma semana:
+            </p>
+            
+            <div id="pasosContainer"></div>
+            
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px dashed #e2e8f0;">
+                <h3 style="color: #1e293b; margin-bottom: 1.5rem;">
+                    <i class="fas fa-lightbulb" style="color: var(--morado-idea);"></i>
+                    Consejo Clave para Ti
+                </h3>
+                <div id="consejoClave" style="background: #f0f9ff; padding: 1.5rem; border-radius: 12px;">
+                    <!-- Consejo dinámico -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Recursos Gratuitos -->
+        <div class="recursos-box">
+            <h3 style="color: #1e293b; margin-bottom: 1.5rem;">
+                <i class="fas fa-gift" style="color: var(--morado-idea);"></i>
+                Recursos Gratuitos para Tu Camino
+            </h3>
+            
+            <div class="recurso-item">
+                <strong>📹 Aprende a tomar mejores fotos con tu teléfono</strong>
+                <p style="margin-top: 8px; color: #475569;">
+                    <a href="https://youtube.com" target="_blank" style="color: var(--azul-idea); text-decoration: none;">
+                        <i class="fas fa-play-circle"></i> Tutoriales gratis en YouTube
+                    </a> - Busca "fotografía producto smartphone"
+                </p>
+            </div>
+            
+            <div class="recurso-item">
+                <strong>📱 Crea una página gratis para mostrar tu trabajo</strong>
+                <p style="margin-top: 8px; color: #475569;">
+                    Usa <strong>Instagram</strong> (es gratis) o 
+                    <a href="https://carrd.co" target="_blank" style="color: var(--azul-idea); text-decoration: none;">
+                        Carrd.co
+                    </a> para hacer una página web en 10 minutos
+                </p>
+            </div>
+            
+            <div class="recurso-item">
+                <strong>💬 Comunidades de apoyo (gratuitas)</strong>
+                <p style="margin-top: 8px; color: #475569;">
+                    Busca en Facebook: "Emprendedores [tu ciudad]" o 
+                    "Artesanos [tu país]" - Pide consejo, la gente ayuda
+                </p>
+            </div>
+            
+            <div class="recurso-item">
+                <strong>📅 Planificador semanal simple</strong>
+                <p style="margin-top: 8px; color: #475569;">
+                    <a href="#" onclick="descargarPlanificadorUniversal()" style="color: var(--azul-idea); text-decoration: none;">
+                        <i class="fas fa-download"></i> Descargar planificador (compatible con todo)
+                    </a>
+                </p>
+            </div>
+        </div>
+        
+        <!-- Compartir -->
+        <div style="text-align: center; margin: 3rem 0;">
+            <p style="color: #475569; margin-bottom: 1rem;">
+                <i class="fas fa-hands-helping" style="color: var(--verde-idea);"></i>
+                ¿Este plan te ayudó? Compártelo con alguien más que lo necesite
+            </p>
+            <button class="boton-secundario" onclick="compartirWhatsApp()">
+                <i class="fab fa-whatsapp" style="margin-right: 8px;"></i>
+                Compartir por WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer con propósito - SIN EMAIL -->
+    <footer class="footer-generador">
+        <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+            Esta herramienta fue creada con <span class="corazon">♥</span> para ayudar a personas 
+            a dar su siguiente paso
+        </p>
+        <p style="color: #94a3b8; font-size: 0.9rem;">
+            No guardamos tus datos • No te pedimos dinero • Solo queremos ayudar
+            <br>
+            <strong>Comparte este recurso con quien lo necesite</strong>
+        </p>
+        <div style="margin-top: 2rem; font-size: 0.8rem; color: #cbd5e1;">
+            Herramienta social • 100% gratis • Sin fines de lucro
+        </div>
+    </footer>
+</section>
+
+</div> <!-- cierre del container -->
+
+<script>
+// ===== FUNCIONES DE FUTURA PRO =====
+function tab(id, btn) {
+    document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.remove('hidden');
+    btn.classList.add('active');
+}
+
+// ===== FUNCIONES DEL GENERADOR DE IDEAS =====
+// Variables para almacenar respuestas del generador
+let respuestasGenerador = {
+    actividad: '',
+    dificultad: '',
+    recursos: []
+};
+
+// Configurar selección de opciones del generador
+document.addEventListener('DOMContentLoaded', function() {
+    // Solo configurar los elementos del generador cuando existan
+    const opcionesGenerador = document.querySelectorAll('#generador .opcion');
+    if (opcionesGenerador.length > 0) {
+        opcionesGenerador.forEach(opcion => {
+            opcion.addEventListener('click', function() {
+                const pregunta = this.closest('.opciones');
+                const multiple = pregunta.getAttribute('data-multiple') === 'true';
+                
+                if (multiple) {
+                    // Selección múltiple
+                    this.classList.toggle('seleccionada');
+                    
+                    // Actualizar array de recursos
+                    const recursosSeleccionados = [];
+                    pregunta.querySelectorAll('.opcion.seleccionada').forEach(sel => {
+                        recursosSeleccionados.push(sel.getAttribute('data-value'));
+                    });
+                    
+                    // Guardar según el ID de la pregunta
+                    const preguntaId = pregunta.id;
+                    if (preguntaId === 'pregunta3') {
+                        respuestasGenerador.recursos = recursosSeleccionados;
+                    }
+                    
+                } else {
+                    // Selección única
+                    pregunta.querySelectorAll('.opcion').forEach(o => {
+                        o.classList.remove('seleccionada');
+                    });
+                    this.classList.add('seleccionada');
+                    
+                    // Guardar respuesta
+                    const preguntaId = pregunta.id;
+                    const valor = this.getAttribute('data-value');
+                    
+                    if (preguntaId === 'pregunta1') {
+                        // Si es "otro", usar el valor del input
+                        if (valor === 'otro') {
+                            const otroInput = document.getElementById('otroInput');
+                            respuestasGenerador.actividad = otroInput.value.trim() || 'otro';
+                        } else {
+                            respuestasGenerador.actividad = valor;
+                        }
+                    } else if (preguntaId === 'pregunta2') {
+                        respuestasGenerador.dificultad = valor;
+                    }
+                }
+            });
+        });
+        
+        // Configurar input "otro" del generador
+        const otroInput = document.getElementById('otroInput');
+        if (otroInput) {
+            otroInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const opcionOtro = this.closest('.opcion');
+                    if (opcionOtro) opcionOtro.click();
+                }
+            });
+        }
+    }
+});
+
+// Función principal para generar el plan del generador
+function generarPlanAccion() {
+    // Validar que se hayan respondido las preguntas
+    if (!respuestasGenerador.actividad || !respuestasGenerador.dificultad) {
+        alert('Por favor, responde las primeras dos preguntas para generar tu plan.');
+        return;
+    }
+
+    // Mostrar sección de resultados
+    const resultadoElement = document.getElementById('resultado');
+    if (resultadoElement) {
+        resultadoElement.style.display = 'block';
+        
+        // Generar pasos según las respuestas
+        const pasos = generarPasosPersonalizados();
+        const consejo = generarConsejoPersonalizado();
+        
+        // Mostrar pasos
+        const pasosContainer = document.getElementById('pasosContainer');
+        if (pasosContainer) {
+            pasosContainer.innerHTML = '';
+            
+            pasos.forEach((paso, index) => {
+                const pasoHTML = `
+                    <div class="paso-accion">
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <div class="numero-paso">${index + 1}</div>
+                            <h4 style="margin: 0; color: #92400e;">${paso.titulo}</h4>
+                        </div>
+                        <p style="color: #475569; margin-bottom: 12px;">${paso.descripcion}</p>
+                        <div style="background: white; padding: 12px; border-radius: 8px; font-size: 0.9rem;">
+                            <strong>🕐 Tiempo estimado:</strong> ${paso.tiempo} | 
+                            <strong>💰 Costo:</strong> ${paso.costo}
+                        </div>
+                    </div>
+                `;
+                pasosContainer.innerHTML += pasoHTML;
+            });
+        }
+        
+        // Mostrar consejo
+        const consejoClave = document.getElementById('consejoClave');
+        if (consejoClave) {
+            consejoClave.innerHTML = `
+                <p style="font-size: 1.1rem; margin: 0; color: #1e293b;">
+                    ${consejo}
+                </p>
+            `;
+        }
+        
+        // Desplazar hacia los resultados
+        resultadoElement.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
+// Generar pasos personalizados según respuestas del generador
+function generarPasosPersonalizados() {
+    const pasosBase = [
+        {
+            titulo: "Documenta tu trabajo actual",
+            descripcion: "Toma 5-10 fotos buenas de lo que haces. Usa luz natural cerca de una ventana. Muestra el proceso, no solo el resultado.",
+            tiempo: "30 minutos esta semana",
+            costo: "Gratis"
+        },
+        {
+            titulo: "Busca 3 personas que puedan darte retroalimentación",
+            descripcion: "Pregunta honestamente: '¿Cuánto pagarías por esto? ¿Qué mejorarías?' No familiares, mejor clientes potenciales.",
+            tiempo: "1-2 horas esta semana",
+            costo: "Gratis"
+        },
+        {
+            titulo: "Haz una prueba pequeña de mejora",
+            descripcion: "Implementa UN cambio pequeño basado en el feedback. Puede ser empaque, presentación, o cómo explicas tu trabajo.",
+            tiempo: "2-3 horas esta semana",
+            costo: "Menos de $5"
+        }
+    ];
+    
+    // Personalizar según actividad
+    if (respuestasGenerador.actividad === 'artesanal') {
+        pasosBase[0].descripcion = "Toma fotos de tus productos con un fondo simple (una pared blanca o tela lisa). Enfócate en los detalles que más te enorgullecen.";
+        pasosBase[2].descripcion = "Mejora el empaque o la tarjeta que acompaña tu producto. Una nota personalizada hace la diferencia.";
+    } else if (respuestasGenerador.actividad === 'comida') {
+        pasosBase[0].descripcion = "Toma fotos de tu comida con buena luz. Muestra los ingredientes frescos y el plato terminado.";
+        pasosBase[2].descripcion = "Crea una muestra pequeña para regalar a cambio de opiniones honestas sobre sabor y presentación.";
+    } else if (respuestasGenerador.actividad === 'servicios') {
+        pasosBase[0].descripcion = "Escribe una lista clara de lo que ofreces, con ejemplos de problemas que resuelves.";
+        pasosBase[2].descripcion = "Ofrece una primera sesión gratuita de 30 minutos para mostrar tu valor antes de cobrar.";
+    }
+    
+    // Personalizar según dificultad
+    if (respuestasGenerador.dificultad === 'clientes') {
+        pasosBase[1].titulo = "Identifica dónde están tus clientes ideales";
+        pasosBase[1].descripcion = "Piensa: ¿Dónde pasan el tiempo? ¿En qué grupos de Facebook? ¿Qué eventos locales? Anota 3 lugares.";
+    } else if (respuestasGenerador.dificultad === 'precios') {
+        pasosBase[1].titulo = "Investiga precios de referencia";
+        pasosBase[1].descripcion = "Busca en internet cuánto cobran otros por algo similar. No copies, solo toma referencia.";
+    } else if (respuestasGenerador.dificultad === 'tiempo') {
+        pasosBase[2].titulo = "Identifica 1 hora que puedas recuperar";
+        pasosBase[2].descripcion = "Esta semana, anota en qué pierdes tiempo. ¿Redes sociales? ¿Tareas repetitivas? Recupera 1 hora.";
+    }
+    
+    // Añadir paso extra si tiene smartphone
+    if (respuestasGenerador.recursos.includes('telefono')) {
+        pasosBase.push({
+            titulo: "Crea una presentación simple en video",
+            descripcion: "Graba un video de 60 segundos mostrando tu trabajo. Di: 'Hola, soy [tu nombre], y ayudo a...' Sube a Instagram o WhatsApp.",
+            tiempo: "20 minutos",
+            costo: "Gratis"
+        });
+    }
+    
+    return pasosBase;
+}
+
+// Generar consejo personalizado del generador
+function generarConsejoPersonalizado() {
+    const consejos = {
+        artesanal: "Tu valor no está solo en el producto, sino en la historia detrás. Cuenta por qué lo haces, qué materiales usas, qué te inspira.",
+        comida: "La gente no compra comida, compra una experiencia. ¿Qué sienten cuando prueban tu producto? ¡Cuéntales!",
+        servicios: "No vendes horas, vendes soluciones. En lugar de 'te ayudo con X', di 'te soluciono el problema de Y'.",
+        digital: "La consistencia gana a la perfección. Mejor publicar algo simple cada semana que algo perfecto cada mes.",
+        otro: "El primer paso es reconocer lo que ya haces bien. Escribe 3 cosas que haces bien en tu actividad actual."
+    };
+    
+    let consejo = consejos[respuestasGenerador.actividad] || 
+        "El crecimiento no es un evento, es un proceso. Pequeños pasos consistentes dan mejores resultados que grandes saltos ocasionales.";
+    
+    // Añadir según dificultad
+    if (respuestasGenerador.dificultad === 'confianza') {
+        consejo += " Recuerda: Todos los expertos alguna vez fueron principiantes. La confianza viene con la acción, no al revés.";
+    }
+    
+    return consejo;
+}
+
+// FUNCIÓN CORREGIDA PARA DESCARGAR PLANIFICADOR
+function descargarPlanificadorUniversal() {
+    // Plantilla 100% compatible - SIN caracteres especiales
+    const plantilla = `PLANIFICADOR SEMANAL SIMPLE
+======================================
+
+LUNES:
+- Tarea principal: _________________________
+- Meta del dia: ___________________________
+
+MARTES:
+- Tarea principal: _________________________
+- Meta del dia: ___________________________
+
+MIERCOLES:
+- Tarea principal: _________________________
+- Meta del dia: ___________________________
+
+JUEVES:
+- Tarea principal: _________________________
+- Meta del dia: ___________________________
+
+VIERNES:
+- Tarea principal: _________________________
+- Meta del dia: ___________________________
+
+FIN DE SEMANA:
+- Descanso y revision: _____________________
+
+=======================================
+ESTA SEMANA ME ENFOCARE EN:
+_______________________________________
+
+MI PEQUENO LOGRO SERA:
+_______________________________________
+
+AGRADEZCO POR:
+_______________________________________
+
+RECORDATORIO:
+* Pequenos pasos > Grandes planes
+* Lo importante es empezar
+* Celebra cada avance
+=======================================
+Guia Practica para Emprendedores`;
+
+    // Crear archivo con encoding UTF-8
+    const blob = new Blob([plantilla], {
+        type: 'text/plain;charset=utf-8'
+    });
+    
+    // Crear enlace de descarga
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'planificador_semanal.txt';
+    
+    // Añadir temporalmente al documento
+    document.body.appendChild(link);
+    
+    // Hacer clic para descargar
+    link.click();
+    
+    // Limpiar después de un momento
+    setTimeout(() => {
+        document.body.removeChild(link);
+        URL.revokeObjectURL(link.href);
+    }, 100);
+    
+    // Mostrar mensaje amigable
+    alert('✅ Planificador descargado correctamente\n\nEl archivo "planificador_semanal.txt" se guardó en tu dispositivo.\n\nPuedes:\n• Abrirlo con cualquier editor de texto\n• Imprimirlo si tienes impresora\n• Copiarlo en un cuaderno');
+}
+
+// Funciones auxiliares del generador
+function reiniciar() {
+    respuestasGenerador = { actividad: '', dificultad: '', recursos: [] };
+    const opcionesGenerador = document.querySelectorAll('#generador .opcion');
+    opcionesGenerador.forEach(o => o.classList.remove('seleccionada'));
+    
+    const otroInput = document.getElementById('otroInput');
+    if (otroInput) otroInput.value = '';
+    
+    const resultadoElement = document.getElementById('resultado');
+    if (resultadoElement) resultadoElement.style.display = 'none';
+    
+    // Desplazar al inicio del generador
+    const generadorSection = document.getElementById('generador');
+    if (generadorSection) {
+        generadorSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
+function compartirWhatsApp() {
+    const texto = "Encontré esta herramienta gratuita que me ayudó a clarificar mis próximos pasos. Te la recomiendo para dar el siguiente paso en tu proyecto:\n\n" + window.location.href;
+    const url = `https://wa.me/?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+}
+
+// Mejorar experiencia táctil en Android
+document.addEventListener('touchstart', function() {}, {passive: true});
+</script>
+
+</body>
+</html>
